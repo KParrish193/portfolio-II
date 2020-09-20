@@ -1,0 +1,234 @@
+import styled, { keyframes } from 'styled-components';
+import { bounce } from 'react-animations';
+import landing from '../assets/lakecopy.jpg';
+import contact from '../assets/herocopy.jpg';
+
+export const bounceAnimation = keyframes`${bounce}`;
+
+export const FadeDiv = styled.div`
+    background-color: #000;
+    color: #fff;
+    width: 90%;
+    // animation: 1s ${bounceAnimation};
+`;
+
+export const AppContainer = styled.div`
+    height: 100vh;
+    background-color: #fff;
+    padding: 3rem;
+`
+
+export const LandingContainer = styled.div`
+    width: 100%;
+    height: 100vh;
+    background-image: url(${landing});
+    background-color: grey;
+    padding-top: 35rem;
+    background-repeat: no-repeat;
+    background-position: 50% 15%;
+    background-size: cover;
+
+    @media(max-width: 1050px){
+        padding-top: 35rem;
+        background-position: 41% 0%;
+    }
+
+    @media(max-width: 700px){
+        padding-top: 25rem;
+        background-position: 45% 0%;
+    }
+
+    .header {
+        padding-left: 4.8rem;
+        background-color: #D0B4A4;
+        width: 59%;
+        min-width: 750px;
+        height: 13.5rem;
+
+        @media(max-width: 1050px){
+            padding-left: 2.5rem;
+            height: 10rem;
+            width: 63%;
+            min-width: 650px;
+        }
+
+        @media(max-width: 700px){
+            padding-left: 1rem;
+            height: 7.5rem;
+            width: 78%;
+            min-width: 415px;
+        }
+
+        @media(max-width: 415px){
+            padding-left: 0.5rem;
+            min-width: 325px;
+            height: 6.5rem;
+        }
+
+        h1 {
+            font-size: 11rem;
+            font-family: 'Noto Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 0.0001;
+            letter-spacing: 0.3rem;
+            color: #282F36;
+
+            @media(max-width: 1050px){
+                font-size: 9.2rem;
+            }
+
+            @media(max-width: 700px){
+                font-size: 6.2rem;
+                letter-spacing: 0.1rem;
+            }
+
+            @media(max-width: 415px){
+                font-size: 5rem;
+                letter-spacing: 0.05rem;
+            }
+        }
+    
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.6rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.65rem;
+            height: 8rem;
+            text-align: center;
+            width: 100%;
+            color: #fff;
+            margin: 0;
+            padding-top: 4rem;
+            padding-left: 5.5rem;
+
+            @media(max-width: 1050px){
+                height: 6.5rem;
+                padding-top: 2rem;
+                padding-left: 4.5rem;
+                font-size: 2.2rem;
+                letter-spacing: 0.7rem;
+            }
+
+            @media(max-width: 700px){
+                padding-top: 2rem;
+                padding-left: 3.7rem;
+                height: 4.5rem;
+                font-size: 1.6rem;
+                letter-spacing: 0.3rem;
+            }
+
+            @media(max-width: 415px){
+                font-size: 1.2rem;
+                padding-left: 2rem;
+                height: 3.7rem;
+            }
+        }
+    }
+`
+
+export const ContactContainer = styled.div`
+    background-image: url(${contact});
+    width: 100%;
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+
+    @media(max-width: 500px){
+        align-items: center;
+    }
+
+    h1 {
+        color: #fff;
+        font-size: 4.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+        padding: 5rem 5rem 2.5rem;
+        margin: 0;
+
+        @media (max-width: 1050px){
+            font-size: 3.6rem;
+            padding: 2rem 2rem 1.5rem
+        }
+
+        @media (max-width: 500px){
+            font-size: 2.9rem;
+            letter-spacing: 0.25rem;
+            padding: 1rem 1rem 0.7rem
+        }
+    }
+
+    h3 {
+        margin: 0 5rem 2.5rem;
+        color: #C3C6D7;
+        text-transform: uppercase;
+        font-size: 2.0rem;
+        font-weight: 500;
+        letter-spacing: 0.5rem;
+
+        @media (max-width: 1050px){
+            font-size: 1.5rem;
+            letter-spacing: .3rem;
+            margin: 0 2rem 1.5rem
+        }
+
+        @media (max-width: 500px){
+            font-size: 1.3rem;
+            letter-spacing: .15rem;
+            margin: 0 1rem 1rem;
+            width: 90%;
+        }
+    }
+
+    div {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        padding: 0.7rem 0;
+        margin: 0 5rem;
+
+        @media (max-width: 1050px){
+            margin: 0rem 2rem;
+            padding: 0.4rem 0;
+        }
+
+        @media (max-width: 500px){
+            margin: 0rem 1rem;
+            padding: 0.2rem 0;
+            width: 90%;
+        }
+
+        p, a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.3rem;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.05rem;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            @media (max-width: 500px){
+                font-size: 1rem;
+            }
+        }
+    }
+`
+
+export const Logo = styled.img`
+    margin-right: 1rem;
+    height: 2rem;
+
+    @media(max-width: 500px){
+        margin-right: 1rem;
+        height: 1.5rem;
+    }
+`
+
