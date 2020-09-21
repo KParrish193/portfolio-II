@@ -2,6 +2,7 @@ import styled, { keyframes } from 'styled-components';
 import { bounce } from 'react-animations';
 import landing from '../assets/lakecopy.jpg';
 import contact from '../assets/herocopy.jpg';
+import skills from '../assets/skills.jpg';
 
 export const bounceAnimation = keyframes`${bounce}`;
 
@@ -43,7 +44,7 @@ export const LandingContainer = styled.div`
         background-color: #D0B4A4;
         width: 59%;
         min-width: 750px;
-        height: 13.5rem;
+        height: 13rem;
 
         @media(max-width: 1050px){
             padding-left: 2.5rem;
@@ -65,9 +66,15 @@ export const LandingContainer = styled.div`
             height: 6.5rem;
         }
 
+        .scroll {
+            border: solid orange 1px;
+            display: flex;
+        }
+
         h1 {
             font-size: 11rem;
-            font-family: 'Noto Sans', sans-serif;
+            font-family: 'Kollektif';
+            font-weight: bold;
             margin: 0;
             padding: 0;
             line-height: 0.0001;
@@ -100,12 +107,10 @@ export const LandingContainer = styled.div`
             width: 100%;
             color: #fff;
             margin: 0;
-            padding-top: 4rem;
-            padding-left: 5.5rem;
+            padding: 2rem 0rem 1rem 5.5rem;
 
             @media(max-width: 1050px){
                 height: 6.5rem;
-                padding-top: 2rem;
                 padding-left: 4.5rem;
                 font-size: 2.2rem;
                 letter-spacing: 0.7rem;
@@ -147,6 +152,8 @@ export const ContactContainer = styled.div`
         color: #fff;
         font-size: 4.8rem;
         text-transform: uppercase;
+        font-family: 'kollektif';
+        font-style: italic;
         letter-spacing: 0.5rem;
         padding: 5rem 5rem 2.5rem;
         margin: 0;
@@ -230,5 +237,238 @@ export const Logo = styled.img`
         margin-right: 1rem;
         height: 1.5rem;
     }
+`
+
+export const NavContainer = styled.div`
+    width: 3rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+    border: solid limegreen 1px;
+
+    .top {
+        padding: 1rem;
+    }
+
+    p {
+        writing-mode: vertical-rl;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: .3rem;
+        padding: 3rem 1rem 1rem; 
+    }
+
+    a {
+        writing-mode: vertical-rl;
+        color: #D0B4A4;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        font-family: 'Montserrat', sans-serif;
+        border-bottom: solid 1px #D0B4A4;
+        padding: 3rem 1rem 1rem; 
+        letter-spacing: .3rem;
+    }
+`
+
+export const SkillsContainer = styled.div`
+    background-image: url(${skills});
+    background-color: #000;
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    background-attachment: scroll;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem 0;
+
+    @media(max-width: 1050px){
+        padding: 2.5rem 0;
+    }
+
+    @media(max-width: 700px){
+        padding: 1rem 0;
+        background-position: 32% 0%;
+    }
+
+    .opp {
+        background-color: #D0B4A4;
+        width: 50%;
+        text-align: right;
+
+        @media(max-width: 1050px){
+            width: 65%;
+        }
+
+        @media(max-width: 700px){
+            width: 85%;
+        }
+    }
+
+    .skill {
+        display: flex;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .bullet-lead {
+            padding: 0.5rem 0rem 0rem 0rem;
+            
+            @media(max-width: 1050px){
+                padding: 0.5rem 0rem 0rem 0rem;
+            }
+
+            @media(max-width: 700px){
+                padding: 0.1rem 0rem 0rem 0rem;
+            }
+        }
+
+        .bullets {
+            padding-left: 2rem;
+
+            @media(max-width: 1050px){
+                padding-left: 1.5rem;
+            }
+    
+            @media(max-width: 700px){
+                padding-left: 0.75rem;
+            }
+        }
+
+        .number {
+            width: 10%;
+            padding-right: 3rem;
+
+            @media(max-width: 1050px){
+                padding-right: 2rem;
+            }
+    
+            @media(max-width: 700px){
+                padding-right: 1.5rem;
+            }
+    
+            @media(max-width: 400px){
+                padding-right: 1rem;
+            }
+        }
+    }
+
+    h1 {
+        text-align: right;
+        color: #fff;
+        font-size: 10rem;
+        font-family: 'kollektif';
+        padding: 0 3.5rem 0 10rem;
+        margin: 0;
+
+        @media(max-width: 1050px){
+            font-size: 8.7rem;
+            padding: 0 2.5rem 0 5rem;
+        }
+
+        @media(max-width: 700px){
+            font-size: 4.5rem;
+            padding: 0 0.75rem 0 0.75rem;
+        }
+    }
+
+    h3 {
+        text-transform: uppercase;
+        color: #fff;
+        font-family: 'kollektif';
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 0.5rem;
+
+        @media(max-width: 1050px){
+            font-size: 1.3rem;
+            letter-spacing: 0.4rem;
+        }
+
+        @media(max-width: 700px){
+            font-size: 1rem;
+            letter-spacing: 0.2rem;
+        }
+    }
+
+    p {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 1.1rem;
+        line-height: 1.2rem;
+        color: #fff;
+        width: 75%;
+        padding: 0.1rem 0rem .3rem 0rem;
+        margin: 0;
+        letter-spacing: 0.15rem;
+
+        @media(max-width: 1050px){
+            font-size: 1rem;
+            padding: 0.1rem 0rem 0.2rem 0rem;
+            width: 90%;
+        }
+
+        @media(max-width: 700px){
+            font-size: 0.9rem;
+            padding: 0.1rem 0rem .1rem 0rem;
+            width: 100%;
+        }
+    }
+
+    .right {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+
+
+        .heading {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 100%;
+        }
+
+        .mobile {}
+
+        .desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            width: 100%;
+            height: 100%;
+            padding: 0 1rem 0 0;
+        }
+
+        @media (max-width: 700px){
+            width: 30%;
+        }
+    }
+
+    .left{
+        width: 45%;
+        padding-left: 3.5rem;
+
+        @media (max-width: 1050px){
+            width: 55%;
+            padding-left: 2.5rem;
+        }
+
+        @media (max-width: 700px){
+            width: 63%;
+            padding-left: 1rem;
+        }
 `
 

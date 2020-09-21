@@ -37,3 +37,12 @@
   }
 }
 
+@font-face {
+  src: url(./assets/fonts/BlackPen.ttf);
+  font-family: 'black-pen';
+}
+
+@font-face {
+  src: url(./assets/fonts/Kollektif-Bold.ttf);
+  font-family: 'kollektif';
+}

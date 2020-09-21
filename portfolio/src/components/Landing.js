@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { LandingContainer } from '../styles'
+import { LandingContainer, NavContainer } from '../styles'
 
 function Landing() {
     return(
@@ -9,7 +9,12 @@ function Landing() {
                 <h1>KP </h1>
                 <h3>Web Developer </h3>
                 <h1>PARRISH</h1>
-            </div>          
+            </div>
+            <div className="scroll">
+                <NavContainer>
+                    <p>Scroll for more ...</p>
+                </NavContainer>
+            </div>
         </LandingContainer>
     )
 }

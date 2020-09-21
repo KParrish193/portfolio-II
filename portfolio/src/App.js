@@ -6,7 +6,7 @@ import About from './components/About.js';
 import Contact from './components/Contact.js';
 import Landing from './components/Landing.js';
 import Projects from './components/Projects.js';
-
+import Skills from './components/Skills.js';
 import ArtxBLM from './components/ArtxBLM.js';
 import HighQ from './components/HighQ.js';
 import Wasatch from './components/Wasatch.js';
@@ -20,7 +20,7 @@ function App() {
     <Route exact path="/" component={Landing} />
     <Route path="/about" component={About} />
     <Route path="/contact" component={Contact} />
-
+    <Route path="/skills" component={Skills} />
     <Route path="/projects" component={Projects} />
     <Route path="/artxblm" component={ArtxBLM} />
     <Route path="/wrdstore" component={Wasatch} />
