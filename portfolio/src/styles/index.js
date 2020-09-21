@@ -143,6 +143,7 @@ export const ContactContainer = styled.div`
     object-fit: cover;
     display: flex;
     flex-direction: column;
+    border: yellow solid 1px;
 
     @media(max-width: 500px){
         align-items: center;
@@ -192,12 +193,18 @@ export const ContactContainer = styled.div`
         }
     }
 
+    .nav {
+        display: flex;
+        border: orange solid 1px;
+    }
+
     div {
         width: 50%;
         display: flex;
         flex-direction: row;
         padding: 0.7rem 0;
         margin: 0 5rem;
+        border: solid limegreen 1px;
 
         @media (max-width: 1050px){
             margin: 0rem 2rem;
@@ -245,11 +252,26 @@ export const NavContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 0;
-    border: solid limegreen 1px;
+    padding-right: 2rem;
+
+    @media(max-width: 1050px){
+        padding-right: 1rem;
+    }
+
+    @media(max-width: 700px){
+        width: 83%;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: solid 1px #D0B4A4;
+        margin-bottom: 2rem;
+    }
 
     .top {
         padding: 1rem;
+
+        @media(max-width: 700px){
+            padding: 0.5rem 0.5rem 0.5rem 1rem;
+        }
     }
 
     p {
@@ -271,8 +293,16 @@ export const NavContainer = styled.div`
         font-size: 1.1rem;
         font-family: 'Montserrat', sans-serif;
         border-bottom: solid 1px #D0B4A4;
-        padding: 3rem 1rem 1rem; 
+        padding: 3rem .75rem .75rem; 
         letter-spacing: .3rem;
+
+        @media(max-width: 700px){
+            writing-mode: horizontal-tb;
+            border-bottom: none;
+            padding: 0.5rem;
+            font-size: 0.7rem;
+            letter-spacing: 0.15rem;
+        }
     }
 `
 
@@ -286,8 +316,7 @@ export const SkillsContainer = styled.div`
     background-size: cover;
     background-attachment: scroll;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     padding: 3rem 0;
 
     @media(max-width: 1050px){
@@ -297,6 +326,12 @@ export const SkillsContainer = styled.div`
     @media(max-width: 700px){
         padding: 1rem 0;
         background-position: 32% 0%;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .opp {
@@ -310,6 +345,15 @@ export const SkillsContainer = styled.div`
 
         @media(max-width: 700px){
             width: 85%;
+        }
+    }
+
+    .mobile {
+        display: none;
+
+        @media(max-width: 700px){
+            width: 100%;
+            display: flex;
         }
     }
 
@@ -433,6 +477,9 @@ export const SkillsContainer = styled.div`
         justify-content: center;
         align-items: flex-end;
 
+        @media(max-width: 700px){
+            justify-content: flex-start;
+        }
 
         .heading {
             display: flex;
@@ -441,8 +488,6 @@ export const SkillsContainer = styled.div`
             width: 100%;
         }
 
-        .mobile {}
-
         .desktop {
             display: flex;
             flex-direction: row;
@@ -450,10 +495,11 @@ export const SkillsContainer = styled.div`
             width: 100%;
             height: 100%;
             padding: 0 1rem 0 0;
-        }
-
-        @media (max-width: 700px){
-            width: 30%;
+        
+            @media (max-width: 700px){
+                width: 30%;
+                display: none;
+            }
         }
     }
 

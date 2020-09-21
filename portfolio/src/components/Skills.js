@@ -6,7 +6,11 @@ import NavOne from './NavOne'
 function Skills() {
     return(
         <SkillsContainer>
+        <div className="nav mobile">
+            <NavOne />
+        </div>
 
+        <div className="content">
         <div className="left">
 
             <div className="skill">
@@ -105,11 +109,11 @@ function Skills() {
                 <h1>S</h1>
             </div>
             
-            <div className="nav desktop">
+            <div className="nav desktop" >
             <NavOne />
             </div>
         </div>
-
+        </div>
         </SkillsContainer>
     )
 }

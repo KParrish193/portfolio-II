@@ -1,5 +1,7 @@
 import React from 'react'
+import NavOne from './NavOne';
 import { ContactContainer, Logo } from '../styles/index'
+
 
 import github from '../assets/icons/github.png'
 import phone from '../assets/icons/call.png'
@@ -9,6 +11,9 @@ import linkedin from '../assets/icons/linkedin.png'
 function Contact() {
     return(
         <ContactContainer>
+            <div className="nav">
+                <NavOne />
+            </div>
             <h1>
                 Contact Me
             </h1>
