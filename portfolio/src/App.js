@@ -25,7 +25,7 @@ function App() {
     <Route path="/artxblm" component={ArtxBLM} />
     <Route path="/wrdstore" component={Wasatch} />
     <Route path="/high-q" component={HighQ} />
-    <Route path="/raheem" component={Raheem} />
+    <Route path="/raheem-ai" component={Raheem} />
 
     </div>
   );

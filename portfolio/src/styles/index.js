@@ -361,6 +361,166 @@ export const NavContainer = styled.div`
     }
 `
 
+export const ProjectContainer = styled.div`
+    width: 100%;
+    display: flex;
+    color: #282F36;
+    padding-top: 4rem; 
+
+    @media(max-width: 1050px){
+        padding-top: 1.5rem;
+    }
+
+    @media(max-width: 700px){
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .opp {
+        background-color: #D0B4A4;
+        width: 40%;
+
+        @media(max-width: 1050px){
+            width: 55%;
+        }
+
+        @media(max-width: 700px){
+            width: 50%;
+        }
+    }
+
+    h1 {
+        color: ;
+        font-size: 10rem;
+        font-family: 'kollektif';
+        padding: 0 0 0 5rem;
+        margin: 0;
+
+        @media(max-width: 1050px){
+            font-size: 8.7rem;
+            padding: 0 0 0 3rem;
+        }
+
+        @media(max-width: 700px){
+            font-size: 4.5rem;
+            padding: 0 0.75rem 0 0.75rem;
+        }
+    }
+
+    .desktop {
+        display: flex;
+        padding-top: 0.75rem;
+
+        @media(max-width: 700px){
+            display: none;
+        }
+    }
+
+    .mobile {
+        display: none;
+
+        @media(max-width: 700px){
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    .content {
+        width: 95%;
+
+        @media(max-width: 700px){
+            width: 100%;
+        }
+    }
+
+    .projects {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0.5rem 3rem;
+
+        @media(max-width: 1050px){
+            padding: 1.5rem 2.5rem 2.5rem;
+        }
+
+        @media(max-width: 700px){
+            padding: 1rem 0.5rem 2.5rem;
+        }
+
+        .row {
+            width: 85%;
+            display: flex;
+            flex-direction: row;
+
+            @media(max-width: 1050px){
+                width: 95%;
+            }
+
+            @media(max-width: 700px){
+                flex-wrap: wrap;
+            }
+
+            a {
+                width: 100%;
+                text-decoration: none;
+                color: #282F36;
+            }
+        }
+    }
+
+    .project {
+        display: flex;
+        flex-direction: row;
+        width: 85%;
+        padding: 1rem 0;
+
+        @media(max-width: 700px){
+            width: 90%;
+        }
+
+        .number {
+            padding-right: 2rem;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h3 {
+
+            font-family: 'kollektif';
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.5rem;
+    
+            @media(max-width: 1050px){
+                font-size: 1.3rem;
+                letter-spacing: 0.4rem;
+            }
+    
+            @media(max-width: 700px){
+                font-size: 1rem;
+                letter-spacing: 0.2rem;
+            }
+        }
+
+        p {
+            width: 100%;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.13rem;
+            padding: 0.5rem 3rem 0 0;
+
+            @media(max-width: 1050px){
+                padding: 0.5rem 2.5rem 0 0;
+            }
+        }
+    }
+
+`
 
 export const SkillsContainer = styled.div`
     background-color: #000;
