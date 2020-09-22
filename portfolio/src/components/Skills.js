@@ -1,11 +1,22 @@
 import React from 'react';
 import { SkillsContainer } from '../styles'
 
+import { useWindowWidth } from '../utils/useWindowWidth'
+
+import skills from '../assets/skills.jpg';
+import skillsWide from '../assets/NZ6_7566.jpg';
+
 import NavOne from './NavOne' 
 
 function Skills() {
+
+    const imageUrl = useWindowWidth() >= 1050 ? skillsWide : skills;
+
     return(
-        <SkillsContainer>
+        <SkillsContainer
+            style={{
+                backgroundImage: `url(${imageUrl})`
+            }}>
         <div className="nav mobile">
             <NavOne />
         </div>

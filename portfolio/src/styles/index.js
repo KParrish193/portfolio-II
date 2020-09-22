@@ -1,8 +1,8 @@
 import styled, { keyframes } from 'styled-components';
 import { bounce } from 'react-animations';
+
 import landing from '../assets/lakecopy.jpg';
 import contact from '../assets/herocopy.jpg';
-import skills from '../assets/skills.jpg';
 
 export const bounceAnimation = keyframes`${bounce}`;
 
@@ -136,11 +136,11 @@ export const LandingContainer = styled.div`
 export const ContactContainer = styled.div`
     background-image: url(${contact});
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: scroll;
-    object-fit: cover;
+    background-attachment: fixed;
+    position: fixed;
     display: flex;
     flex-direction: column;
     border: yellow solid 1px;
@@ -306,26 +306,28 @@ export const NavContainer = styled.div`
     }
 `
 
+
 export const SkillsContainer = styled.div`
-    background-image: url(${skills});
     background-color: #000;
     width: 100%;
     height: auto;
     background-repeat: no-repeat;
-    background-position: left top;
+    background-position: 0% 40%;
     background-size: cover;
-    background-attachment: scroll;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     padding: 3rem 0;
 
     @media(max-width: 1050px){
         padding: 2.5rem 0;
+        background-position: top left;
+        background-size: cover;
     }
 
     @media(max-width: 700px){
         padding: 1rem 0;
-        background-position: 32% 0%;
+        background-position: center left;
     }
 
     .content {
@@ -336,7 +338,7 @@ export const SkillsContainer = styled.div`
 
     .opp {
         background-color: #D0B4A4;
-        width: 50%;
+
         text-align: right;
 
         @media(max-width: 1050px){
@@ -359,6 +361,7 @@ export const SkillsContainer = styled.div`
 
     .skill {
         display: flex;
+        padding: 0 0.35rem 1rem 0;
 
         div {
             display: flex;
@@ -399,11 +402,7 @@ export const SkillsContainer = styled.div`
             }
     
             @media(max-width: 700px){
-                padding-right: 1.5rem;
-            }
-    
-            @media(max-width: 400px){
-                padding-right: 1rem;
+                padding-right: 0.75rem;
             }
         }
     }
