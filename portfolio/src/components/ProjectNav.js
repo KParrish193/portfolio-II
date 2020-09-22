@@ -1,25 +1,26 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { ProjectNavContainer} from '../styles'
 
 function ProjectNav(){
     return(
-        <div>
+        <ProjectNavContainer>
             <NavLink to="/artxblm" className="top">
-                01 Art x BLM
+                <p>01.</p> Art x BLM
             </NavLink>
 
             <NavLink to="/raheem-ai">
-                02 Raheem AI
+                <p>02.</p> Raheem AI
             </NavLink>
 
             <NavLink to="/high-q">
-                03 High-Q
+                <p>03.</p> High-Q
             </NavLink>
 
             <NavLink to="/wrdstore">
-                04 Wasatch Roller Derby Store
+                <p>04.</p> Wasatch Roller Derby Store
             </NavLink>
-        </div>
+        </ProjectNavContainer>
     )
 }
 

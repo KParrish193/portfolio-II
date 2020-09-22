@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { bounce } from 'react-animations';
-
+import about from '../assets/NZ6_7498.jpg';
 import landing from '../assets/lakecopy.jpg';
 import contact from '../assets/herocopy.jpg';
 
@@ -20,9 +20,9 @@ export const AppContainer = styled.div`
 `
 
 export const LandingContainer = styled.div`
+    background-image: url(${landing});    
     width: 100%;
     height: 100vh;
-    background-image: url(${landing});
     background-color: grey;
     padding-top: 35rem;
     background-repeat: no-repeat;
@@ -128,6 +128,139 @@ export const LandingContainer = styled.div`
                 font-size: 1.2rem;
                 padding-left: 2rem;
                 height: 3.7rem;
+            }
+        }
+    }
+`
+
+export const AboutContainer = styled.div`
+    width: 100%;
+    display: flex;
+    height: auto;
+    flex-direction: row;
+
+    .heading {
+        display: inline block;
+        width: 50rem;
+
+        @media(max-width: 700px){
+            width: 25rem;
+        }
+        
+        h2 {
+            font-family: 'kollektif';
+            font-size: 5rem;
+            text-transform: uppercase;
+            padding: 0;
+            margin: 0;
+
+            @media(max-width: 700px){
+                font-size: 3.2rem;
+            }
+        }
+    }
+
+    .paragraphs {
+        width: 90%;
+    }
+    
+    .image {
+        background-image: url(${about});
+        background-repeat: no-repeat;
+        background-position: 50% 10%;
+        background-size: cover;
+        width: 66%;
+        height: auto;
+
+        @media(max-width: 700px){
+            display: none;
+        }
+
+        .nav {
+            padding-top: 2rem;
+            
+            @media(max-width: 700px){
+                padding-top: 0;
+            }
+
+            a {
+                color: #282F36;
+                writing-mode: vertical-rl;
+                border-bottom: solid 1px #282F36;
+
+                @media(max-width: 700px){
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
+    .content {
+        background-color: #fff;
+        color: #282F36;
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+
+        @media(max-width: 700px){
+            width: 50%;
+        }
+
+        h4 {
+            color: #D0B4A4;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            padding: 0;
+            margin: 0;
+        }
+
+        .opp {
+            background-color: #D0B4A4;
+            width: 40%;
+    
+            @media(max-width: 1050px){
+                width: 55%;
+            }
+    
+            @media(max-width: 700px){
+                width: 50%;
+            }
+        }
+
+        .not {
+            width: 100%;
+            padding: 1rem 0 0.25rem;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-family: 'kollektif';
+            font-size: 3rem;
+            color: #282F36;
+            margin: 0;
+            padding: 0 1rem;
+
+            @media(max-width: 1050px){
+                padding: 0 0.75rem;
+            }
+
+            @media(max-width: 700px){
+                padding: 0 0.5rem;
+            }
+        }
+
+        p {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.13rem;
+            padding: 0.5rem 3rem 0 0;
+            width: 100%;
+
+            @media(max-width: 1050px){
+                padding: 0.5rem 2.5rem 0 0;
             }
         }
     }
@@ -361,6 +494,41 @@ export const NavContainer = styled.div`
     }
 `
 
+export const ProjectNavContainer = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+
+    p {
+        margin: 0;
+        padding: 0 .75rem 0 0;
+
+        @media(max-width: 700px ){
+            padding: 0 .25rem 0 0;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #282F36;
+        font-size: 0.9rem;
+        letters-spacing: 0.1rem;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+
+        @media(max-width: 700px){
+            font-size: 0.5rem;
+        }
+    }
+`
+
 export const ProjectContainer = styled.div`
     width: 100%;
     display: flex;
@@ -519,7 +687,27 @@ export const ProjectContainer = styled.div`
             }
         }
     }
+`
 
+export const RaheemContainer = styled.div`
+    width: 100%;
+
+    h2 {
+        text-transform: uppercase;
+        font-family: 'kollektif'
+    }
+
+    .left {
+
+    }
+
+    .right {
+
+    }
+
+    .split {
+
+    }
 `
 
 export const SkillsContainer = styled.div`
