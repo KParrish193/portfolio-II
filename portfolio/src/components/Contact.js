@@ -1,7 +1,7 @@
 import React from 'react'
 import NavOne from './NavOne';
 import { ContactContainer, Logo } from '../styles/index'
-
+import { NavLink } from 'react-router-dom';
 
 import github from '../assets/icons/github.png'
 import phone from '../assets/icons/call.png'
@@ -11,9 +11,11 @@ import linkedin from '../assets/icons/linkedin.png'
 function Contact() {
     return(
         <ContactContainer>
-            <div className="nav">
+            <div className="mobile nav">
                 <NavOne />
             </div>
+
+            <div className="content">
             <h1>
                 Contact Me
             </h1>
@@ -45,6 +47,25 @@ function Contact() {
                 <Logo src={mail} alt="mail icon"/>
                 K.Parrish193@gmail.com
                 </a>
+            </div>
+            </div>
+
+            <div className="desktop nav">
+                <NavLink to="/about" className="top">
+                    About
+                </NavLink>
+
+                <NavLink to="/skills">
+                    Skills
+                </NavLink>
+
+                <NavLink to="/projects">
+                    Projects
+                </NavLink>
+
+                <NavLink to="/contact">
+                    Contact
+                </NavLink>
             </div>
         </ContactContainer>
     )

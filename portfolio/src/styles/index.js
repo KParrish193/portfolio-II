@@ -136,16 +136,17 @@ export const LandingContainer = styled.div`
 export const ContactContainer = styled.div`
     background-image: url(${contact});
     width: 100%;
-    height: auto;
+    height: 100vh;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    position: fixed;
+    justify-content: space-between;
     display: flex;
-    flex-direction: column;
-    border: yellow solid 1px;
+    flex-direction: row;
 
-    @media(max-width: 500px){
+    @media(max-width: 700px){
+        flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
     }
 
@@ -156,18 +157,19 @@ export const ContactContainer = styled.div`
         font-family: 'kollektif';
         font-style: italic;
         letter-spacing: 0.5rem;
-        padding: 5rem 5rem 2.5rem;
+        padding: 4rem 5rem 2.5rem;
         margin: 0;
+        width: 100%;
 
         @media (max-width: 1050px){
             font-size: 3.6rem;
             padding: 2rem 2rem 1.5rem
         }
 
-        @media (max-width: 500px){
+        @media (max-width: 700px){
             font-size: 2.9rem;
             letter-spacing: 0.25rem;
-            padding: 1rem 1rem 0.7rem
+            padding: 1rem 0rem 0.7rem
         }
     }
 
@@ -193,18 +195,72 @@ export const ContactContainer = styled.div`
         }
     }
 
+    .content {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
     .nav {
         display: flex;
-        border: orange solid 1px;
+        width: 10%;
+
+        @media(max-width: 700px){
+            width: 100%;
+        }
+
+        div {
+            width: 100%;
+        }
+
+        a {
+            font-size: 1rem;
+            padding: 0;
+            margin: 0;
+            border-bottom: none;
+
+            @media(max-width: 700px){
+                font-size: 0.6rem;
+            }
+        }
+    }
+
+    .mobile {
+        display: none;
+
+        @media(max-width: 700px){
+            display: flex;
+        }
+    }
+
+    .desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        width: 5%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+
+        a {
+            writing-mode: vertical-rl;
+            text-transform: uppercase;
+            padding: 2rem 1rem;
+        }
+
+        @media(max-width: 700px){
+            display: none;
+        }
     }
 
     div {
-        width: 50%;
+        width: 70%;
         display: flex;
         flex-direction: row;
         padding: 0.7rem 0;
         margin: 0 5rem;
-        border: solid limegreen 1px;
 
         @media (max-width: 1050px){
             margin: 0rem 2rem;
@@ -262,7 +318,6 @@ export const NavContainer = styled.div`
         width: 83%;
         flex-direction: row;
         justify-content: space-between;
-        border-bottom: solid 1px #D0B4A4;
         margin-bottom: 2rem;
     }
 
