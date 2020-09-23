@@ -1,16 +1,21 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { ProjectNavContainer} from '../styles'
+import back from '../assets/icons/backarrow.png';
 
 function ProjectNav(){
     return(
         <ProjectNavContainer>
-            <NavLink to="/artxblm" className="top">
-                <p>01.</p> Art x BLM
+            <NavLink to="/projects" className="top">
+                &#8592; Projects
+            </NavLink>
+
+            <NavLink to="/artxblm">
+                <p>01.</p> ArtxBLM
             </NavLink>
 
             <NavLink to="/raheem-ai">
-                <p>02.</p> Raheem AI
+                <p>02.</p> Raheem
             </NavLink>
 
             <NavLink to="/high-q">
@@ -18,7 +23,7 @@ function ProjectNav(){
             </NavLink>
 
             <NavLink to="/wrdstore">
-                <p>04.</p> Wasatch Roller Derby Store
+                <p>04.</p> Wasatch Roller Derby
             </NavLink>
         </ProjectNavContainer>
     )

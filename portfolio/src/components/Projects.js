@@ -53,7 +53,7 @@ function Projects() {
                         <h3 className="number">02</h3>
                     </div>
                     <div>
-                        <h3>RAHEEM.AI</h3>
+                        <h3>RAHEEM</h3>
                         <p>A mobile-forward, independent, online service to help people take action against police violence</p>
                         <p>• Collaborated with a remote, cross-functional team of 5 developers and 2 UX designers from across the United States</p>
                         <p>• Conducted primary user research and information collection working directly with UX and stakeholders</p>
