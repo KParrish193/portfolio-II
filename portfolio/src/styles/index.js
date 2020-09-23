@@ -136,6 +136,7 @@ export const LandingContainer = styled.div`
 export const AboutContainer = styled.div`
     width: 100%;
     display: flex;
+    min-height: 100vh;
     height: auto;
     flex-direction: row;
 
@@ -144,7 +145,7 @@ export const AboutContainer = styled.div`
         width: 50rem;
 
         @media(max-width: 700px){
-            width: 25rem;
+            width: 90%;
         }
         
         h2 {
@@ -159,6 +160,36 @@ export const AboutContainer = styled.div`
             }
         }
     }
+
+    .mobilenav {
+        display: none;
+
+        @media(max-width: 700px){
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .mobile {
+            display: none;
+    
+            @media(max-width: 700px){
+                width: 100%;
+                display: flex;
+                justify-content: center;
+    
+                img {
+                    margin: 1rem 0 0; 
+                    width: 100%;
+                    height: 20rem;
+                    object-fit: cover;
+                    position: center;
+                }
+            }
+        }
+    
+
 
     .paragraphs {
         width: 90%;
@@ -205,16 +236,29 @@ export const AboutContainer = styled.div`
         padding: 2rem 0;
 
         @media(max-width: 700px){
-            width: 50%;
+            width: 100%;
+            padding: 0 0 3rem 0;
         }
 
         h4 {
             color: #D0B4A4;
             font-family: 'Montserrat', sans-serif;
+            font-size: 1.9rem;
             text-transform: uppercase;
             letter-spacing: 0.15rem;
             padding: 0;
             margin: 0;
+
+
+            @media(max-width: 1050px){
+                font-size: 1.5rem;
+                padding-bottom: 0.5rem; 
+            }
+
+            @media(max-width: 700px){
+                font-size: 1.3rem;
+                padding: 0;
+            }
         }
 
         .opp {
@@ -226,13 +270,36 @@ export const AboutContainer = styled.div`
             }
     
             @media(max-width: 700px){
-                width: 50%;
+                width: 45%;
             }
         }
 
         .not {
             width: 100%;
-            padding: 1rem 0 0.25rem;
+            padding: 1rem 0 0;
+
+            img {
+                display: none;
+            }
+
+            @media(max-width: 700px){
+                width: 100%;
+
+                img {
+                    display: block;
+                    width: 90%;
+                    margin: 0 auto;
+                    padding-top: 1rem;
+                }
+            }
+        }
+
+        .top {
+            padding-top: 0.5rem;
+
+            @media(max-width: 700px){
+                padding-top: 1rem;
+            }
         }
 
         h3 {
@@ -241,14 +308,14 @@ export const AboutContainer = styled.div`
             font-size: 3rem;
             color: #282F36;
             margin: 0;
-            padding: 0 1rem;
+            padding: 0 1.5rem;
 
             @media(max-width: 1050px){
                 padding: 0 0.75rem;
             }
 
             @media(max-width: 700px){
-                padding: 0 0.5rem;
+                padding: 0 1.25rem 0;
             }
         }
 
@@ -256,11 +323,15 @@ export const AboutContainer = styled.div`
             margin: 0;
             font-family: 'Montserrat', sans-serif;
             letter-spacing: 0.13rem;
-            padding: 0.5rem 3rem 0 0;
+            padding: 1.5rem 3rem 0 0;
             width: 100%;
 
             @media(max-width: 1050px){
-                padding: 0.5rem 2.5rem 0 0;
+                padding: 1rem 2.5rem 0 0;
+            }
+
+            @media(max-width: 700px){
+                padding: 1rem 0 0 0;
             }
         }
     }
