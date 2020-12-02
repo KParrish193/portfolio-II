@@ -1,16 +1,16 @@
 import styled, { keyframes } from 'styled-components';
-import { bounce } from 'react-animations';
+import { slideInDown } from 'react-animations';
 import about from '../assets/NZ6_7498.jpg';
 import landing from '../assets/lakecopy.jpg';
 import contact from '../assets/herocopy.jpg';
 
-export const bounceAnimation = keyframes`${bounce}`;
+export const slideAnimation = keyframes`${slideInDown}`;
 
-export const FadeDiv = styled.div`
+export const SlideDiv = styled.div`
     background-color: #000;
     color: #fff;
     width: 90%;
-    // animation: 1s ${bounceAnimation};
+    animation: 1s ${slideAnimation};
 `;
 
 export const AppContainer = styled.div`
@@ -145,7 +145,6 @@ export const AboutContainer = styled.div`
     }
 
     .heading {
-        z-index: 90;
         width: 50rem;
 
         @media(max-width: 1050px){
@@ -155,7 +154,6 @@ export const AboutContainer = styled.div`
         @media(max-width: 700px){
             max-width: 90%;
             min-width: 90%;
-            z-index: 0;
         }
         
         h2 {
@@ -253,11 +251,14 @@ export const AboutContainer = styled.div`
     .image {
         background-image: url(${about});
         background-repeat: no-repeat;
-        background-position: 50% 10%;
+        background-position: 45% 10%;
         background-size: cover;
         width: 66%;
         height: auto;
-        z-index: -1;
+
+        @media(max-width: 1050px){
+            background-position: 52% 0%;
+        }
 
         @media(max-width: 700px){
             display: none;
@@ -265,7 +266,8 @@ export const AboutContainer = styled.div`
 
         .nav {
             padding-top: 2rem;
-            
+            width: 20%;
+
             @media(max-width: 700px){
                 padding-top: 0;
             }
@@ -292,7 +294,6 @@ export const AboutContainer = styled.div`
         justify-content: flex-start;
         align-items: flex-end;
         padding: 2rem 0;
-        z-index: -1;
 
         @media(max-width: 1050px){
             max-width: 45%;
@@ -303,8 +304,7 @@ export const AboutContainer = styled.div`
             max-width: 100%;
             min-width: 100%;
             align-items: center;
-            z-index: 0;
-            padding: 0;
+            padding: 0 0 2rem 0;
         }
 
         h4 {
@@ -374,11 +374,7 @@ export const AboutContainer = styled.div`
             font-size: 3rem;
             color: #282F36;
             margin: 0;
-            padding: 0 1.5rem;
-
-            @media(max-width: 1050px){
-                padding: 0 1.5rem;
-            }
+            padding: 0 1rem;
         }
 
         p {
@@ -440,7 +436,7 @@ export const ContactContainer = styled.div`
 
     h3 {
         margin: 0 5rem 2.5rem;
-        color: #C3C6D7;
+        color: #121c27;
         text-transform: uppercase;
         font-size: 2.0rem;
         font-weight: 500;
@@ -513,6 +509,7 @@ export const ContactContainer = styled.div`
             writing-mode: vertical-rl;
             text-transform: uppercase;
             padding: 2rem 1rem;
+            color: #fff;
         }
 
         @media(max-width: 700px){
@@ -613,7 +610,6 @@ export const NavContainer = styled.div`
         text-transform: uppercase;
         font-size: 1.1rem;
         font-family: 'Montserrat', sans-serif;
-        border-bottom: solid 1px #b2935b;
         padding: 3rem .75rem .75rem; 
         letter-spacing: .3rem;
 
@@ -638,6 +634,7 @@ export const ProjectNavContainer = styled.div`
         margin: 0;
         padding: 0 .75rem 0 0;
         font-size: 0.9rem;
+        color: #C1C3C4;
 
         @media(max-width: 700px){
             padding: 0 .25rem 0 0;
@@ -647,7 +644,7 @@ export const ProjectNavContainer = styled.div`
 
     a {
         text-decoration: none;
-        color: #282F36;
+        color: #C1C3C4;
         font-size: 0.9rem;
         letters-spacing: 0.1rem;
         text-transform: uppercase;
@@ -660,6 +657,10 @@ export const ProjectNavContainer = styled.div`
 
         @media(max-width: 700px){
             font-size: 0.5rem;
+        }
+
+        :hover {
+            color: #b2935b;
         }
     }
 `
@@ -696,7 +697,7 @@ export const ProjectContainer = styled.div`
 
     h1 {
         color: #fff;
-        font-size: 10rem;
+        font-size: 9rem;
         font-family: 'kollektif';
         padding: 0 0 0 5rem;
         margin: 0;
@@ -726,6 +727,7 @@ export const ProjectContainer = styled.div`
 
         @media(max-width: 700px){
             display: flex;
+            padding: 0.5rem 0.5rem 0 0 ;
             justify-content: flex-end;
         }
     }
@@ -828,11 +830,11 @@ export const ProjectContainer = styled.div`
 `
 
 export const SkillsContainer = styled.div`
-    background-color: #000;
+    background-color: #171c21;
     width: 100%;
     height: auto;
     background-repeat: no-repeat;
-    background-position: 0% 40%;
+    background-position: 70% 41%;
     background-size: cover;
     background-attachment: fixed;
     display: flex;
@@ -858,7 +860,6 @@ export const SkillsContainer = styled.div`
 
     .opp {
         background-color: #b2935b;
-
         text-align: right;
 
         @media(max-width: 1050px){
@@ -874,7 +875,7 @@ export const SkillsContainer = styled.div`
         display: none;
 
         @media(max-width: 700px){
-            width: 100%;
+            width: 97%;
             display: flex;
             justify-content: center;
         }
@@ -931,7 +932,7 @@ export const SkillsContainer = styled.div`
     h1 {
         text-align: right;
         color: #fff;
-        font-size: 10rem;
+        font-size: 9rem;
         font-family: 'kollektif';
         padding: 0 3.5rem 0 10rem;
         margin: 0;
@@ -949,7 +950,7 @@ export const SkillsContainer = styled.div`
 
     h3 {
         text-transform: uppercase;
-        color: #fff;
+        color: #b2935b;
         font-family: 'kollektif';
         font-size: 1.5rem;
         font-weight: 700;
@@ -1039,7 +1040,7 @@ export const SkillsContainer = styled.div`
 `
 
 export const ArtHighContainer = styled.div`
-        background-color: #000;
+        background-color: #171c21;
         height: auto;
         width: 100%;
         display: flex;
@@ -1080,7 +1081,6 @@ export const ArtHighContainer = styled.div`
 
         img {
             width: 55%;
-            border: solid #D0B4A4 2px;
 
             @media(max-width: 1050px){
                 width: 60%;
@@ -1152,12 +1152,10 @@ export const ArtHighContainer = styled.div`
         }
 
         a {
-            color: #fff;
             text-decoration: none;
         }
 
         p {
-            color: #fff;
             font-family: 'Montserrat', sans-serif;
             font-weight: 500;
             font-size: 1.1rem;
@@ -1165,6 +1163,7 @@ export const ArtHighContainer = styled.div`
             letter-spacing: 0.15rem;
             padding: 0;
             margin: 0;
+            color: #fff;
 
             @media(max-width: 1050px){
                 font-size: 1rem;
@@ -1208,7 +1207,7 @@ export const ArtHighContainer = styled.div`
 
             h5 {
                 background-color: #D0B4A4;
-                color: #000;
+                color: #171c21;
                 width: 90%;
                 padding-left: 0.5rem;
             }
@@ -1228,12 +1227,12 @@ export const ArtHighContainer = styled.div`
             }
 
             .link {
-                background-color: #D0B4A4;
+                background-color: #b2935b;
                 margin-bottom: 1.5rem;
             }
 
             .tech {
-                background-color: #D0B4A4;
+                background-color: #b2935b;
             }
         }
 
@@ -1332,7 +1331,7 @@ export const RaheemWrdContainer = styled.div`
 
         img {
             width: 55%;
-            border: solid 2px #000;
+            border: solid 2px #171c21;
 
             @media(max-width: 1050px){
                 width: 60%;
@@ -1344,7 +1343,7 @@ export const RaheemWrdContainer = styled.div`
         }
 
         h3 {
-            color: #000;
+            color: #171c21;
             font-family: 'kollektif';
             font-size: 2.8rem;
             font-weight: 700;
@@ -1383,7 +1382,7 @@ export const RaheemWrdContainer = styled.div`
         }
 
         h6 {
-            color: #000;
+            color: #171c21;
             font-family: 'kollektif';
             font-size: 1rem;
             font-weight: 700;
@@ -1403,12 +1402,10 @@ export const RaheemWrdContainer = styled.div`
         }
 
         a {
-            color: #000;
             text-decoration: none;
         }
 
         p {
-            color: #000;
             font-family: 'Montserrat', sans-serif;
             font-weight: 500;
             font-size: 1.1rem;
@@ -1442,7 +1439,7 @@ export const RaheemWrdContainer = styled.div`
             }
 
             a :hover {
-                color: #D0B4A4;
+                color: #b2935b;
             }
 
             div {
@@ -1467,7 +1464,7 @@ export const RaheemWrdContainer = styled.div`
                 padding-left: 2rem;
                 width: 80%;
                 margin: 0.5rem 0;
-                color: #D0B4A4;
+                color: #b2935b;
             }
 
             p {
@@ -1479,12 +1476,12 @@ export const RaheemWrdContainer = styled.div`
             }
 
             .link {
-                background-color: #000;
+                background-color: #171c21;
                 margin-bottom: 1.5rem;
             }
 
             .tech {
-                background-color: #000;
+                background-color: #171c21;
             }
         }
 

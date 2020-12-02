@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { ProjectNavContainer} from '../styles'
-import back from '../assets/icons/backarrow.png';
 
 function ProjectNav(){
     return(
@@ -10,20 +9,39 @@ function ProjectNav(){
                 &#8592; Projects
             </NavLink>
 
-            <NavLink to="/artxblm">
-                <p>01.</p> ArtxBLM
+            <NavLink 
+                to="/artxblm"
+                activeStyle={{
+                    color: '#fff',
+                    fontWeight: '900', 
+                }}>
+                01.  ArtxBLM
             </NavLink>
 
-            <NavLink to="/raheem-ai">
-                <p>02.</p> Raheem
+            <NavLink 
+                to="/raheem-ai" 
+                activeStyle={{
+                    color: '#171c21'
+                }}>
+                02. Raheem
             </NavLink>
 
-            <NavLink to="/high-q">
-                <p>03.</p> High-Q
+            <NavLink 
+                to="/high-q"                 
+                activeStyle={{
+                    color: '#fff', 
+                    fontWeight: '900'
+                }}>
+                03. High-Q
             </NavLink>
 
-            <NavLink to="/wrdstore">
-                <p>04.</p> Wasatch Roller Derby
+            <NavLink 
+                to="/wrdstore"
+                activeStyle={{
+                    color: '#171c21', 
+                    fontWeight: '900'
+                }}>
+                04. Wasatch Roller Derby
             </NavLink>
         </ProjectNavContainer>
     )

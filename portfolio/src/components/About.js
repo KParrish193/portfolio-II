@@ -6,14 +6,14 @@ import me from '../assets/NZ6_7512.jpg';
 
 function About() {
     return(
-        <AboutContainer>
+
+        <AboutContainer className="ugh">
 
             <div className="image">
                 <div className="nav">
                     <NavOne />
                 </div>
             </div>
-
 
             <div className="content">
                 <div className="mobilenav">
@@ -26,7 +26,7 @@ function About() {
 
                 <div className="paragraphs-container">
                 <div className="paragraphs">
-                    <h4>Location -</h4>
+                    <h4>Current Location:</h4>
                     <h4 className="color">
                     Salt Lake City,
                     </h4>
@@ -46,7 +46,7 @@ function About() {
                     I am a highly design-oriented Fullstack Web Developer (HTML, CSS, JavaScript, React, NodeJS) currently seeking new opportunities in the western United States. I recently completed the Full Stack Web curriculum at Lambda School in August of 2020, and graduated from Boise State University with a Bachelor's degree in Marketing and Chemistry minor in 2014.</p>
 
                     <p>
-                    Emphasizing positive user experiences in front-end web design is where I do my best work. I strive to make every interaction with my work give people warm fuzzy feelings like a small kitten's purr. My other work experience includes a demonstrated history of customer service, attention to detail, and teamwork working within the retail industry.</p>
+                    Emphasizing positive user experiences in front-end web design is where I do my best work. I strive to make every interaction with my work elicit warm fuzzy feelings like a small kitten's purr. My other work experience includes a demonstrated history of customer service, attention to detail, and teamwork working within the retail industry.</p>
                     </div>
 
                     <div className="not">
@@ -65,7 +65,6 @@ function About() {
                     </div>
                     </div>
                 </div>
-
         </AboutContainer>
     )
 }
