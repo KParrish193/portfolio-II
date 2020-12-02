@@ -41,7 +41,7 @@ export const LandingContainer = styled.div`
 
     .header {
         padding-left: 4.8rem;
-        background-color: #D0B4A4;
+        background-color: #b2935b;
         width: 59%;
         min-width: 750px;
         height: 13rem;
@@ -79,7 +79,7 @@ export const LandingContainer = styled.div`
             padding: 0;
             line-height: 0.0001;
             letter-spacing: 0.3rem;
-            color: #282F36;
+            color: #171c21;
 
             @media(max-width: 1050px){
                 font-size: 9.2rem;
@@ -140,34 +140,71 @@ export const AboutContainer = styled.div`
     height: auto;
     flex-direction: row;
 
+    @media(max-width: 700px){
+        justify-content: center;
+    }
+
     .heading {
-        display: inline block;
+        z-index: 90;
         width: 50rem;
 
+        @media(max-width: 1050px){
+            width: 40rem;
+        }
+
         @media(max-width: 700px){
-            width: 90%;
+            max-width: 90%;
+            min-width: 90%;
+            z-index: 0;
         }
         
         h2 {
             font-family: 'kollektif';
-            font-size: 5rem;
+            font-size: 6.3rem;
             text-transform: uppercase;
             padding: 0;
             margin: 0;
+            color: #171c21;
+            letter-spacing: 0.3rem;
 
             @media(max-width: 700px){
-                font-size: 3.2rem;
+                font-size: 4.1rem;
+                text-align: center;
+                letter-spacing: 0.1rem;
+            }
+
+            @media(max-width: 400px){
+                font-size: 3.8rem;
             }
         }
+    }
+
+    .name {
+        color: #b2935b;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 1.3rem;
     }
 
     .mobilenav {
         display: none;
 
         @media(max-width: 700px){
-            width: 100%;
+            width: 90%;
             display: flex;
             justify-content: center;
+            color: #171c21;
+            margin-bottom: 1rem;
+            
+            .top {
+                padding: 0 0 0 0;
+                margin: 0;
+            }
+
+            a {
+                padding: 1rem 0 0 0;
+                margin: 0;
+            }
         }
     }
 
@@ -188,9 +225,29 @@ export const AboutContainer = styled.div`
                 }
             }
         }
+
+    .paragraphs-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1rem;
+
+        @media(max-width: 700px;){
+            padding-top: 0;
+        }
+    }
     
     .paragraphs {
-        width: 90%;
+        width: 92%;
+
+        @media(max-width: 1050px){
+            width: 90%;
+        }
+
+        .color {
+            color: #171c21;
+        }
     }
     
     .image {
@@ -200,6 +257,7 @@ export const AboutContainer = styled.div`
         background-size: cover;
         width: 66%;
         height: auto;
+        z-index: -1;
 
         @media(max-width: 700px){
             display: none;
@@ -213,9 +271,9 @@ export const AboutContainer = styled.div`
             }
 
             a {
-                color: #282F36;
+                color: #171c21;
                 writing-mode: vertical-rl;
-                border-bottom: solid 1px #282F36;
+                border-bottom: none;
 
                 @media(max-width: 700px){
                     border-bottom: none;
@@ -226,27 +284,37 @@ export const AboutContainer = styled.div`
 
     .content {
         background-color: #fff;
-        color: #282F36;
-        width: 33%;
+        color: #171c21;
+        max-width: 35%;
+        min-width: 35%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: flex-end;
         padding: 2rem 0;
+        z-index: -1;
+
+        @media(max-width: 1050px){
+            max-width: 45%;
+            min-width: 45%;
+        }
 
         @media(max-width: 700px){
-            width: 100%;
-            padding: 0 0 3rem 0;
+            max-width: 100%;
+            min-width: 100%;
+            align-items: center;
+            z-index: 0;
+            padding: 0;
         }
 
         h4 {
-            color: #D0B4A4;
+            color: #b2935b;
             font-family: 'Montserrat', sans-serif;
             font-size: 1.9rem;
             text-transform: uppercase;
             letter-spacing: 0.15rem;
             padding: 0;
             margin: 0;
-
 
             @media(max-width: 1050px){
                 font-size: 1.5rem;
@@ -260,7 +328,7 @@ export const AboutContainer = styled.div`
         }
 
         .opp {
-            background-color: #D0B4A4;
+            background-color: #b2935b;
             width: 40%;
     
             @media(max-width: 1050px){
@@ -274,7 +342,7 @@ export const AboutContainer = styled.div`
 
         .not {
             width: 100%;
-            padding: 1rem 0 0;
+            padding: 1rem 0 0.5rem;
 
             img {
                 display: none;
@@ -309,11 +377,7 @@ export const AboutContainer = styled.div`
             padding: 0 1.5rem;
 
             @media(max-width: 1050px){
-                padding: 0 0.75rem;
-            }
-
-            @media(max-width: 700px){
-                padding: 0 1.25rem 0;
+                padding: 0 1.5rem;
             }
         }
 
@@ -321,11 +385,11 @@ export const AboutContainer = styled.div`
             margin: 0;
             font-family: 'Montserrat', sans-serif;
             letter-spacing: 0.13rem;
-            padding: 1.5rem 3rem 0 0;
+            padding: 1.5rem 0 0 0;
             width: 100%;
 
             @media(max-width: 1050px){
-                padding: 1rem 2.5rem 0 0;
+                padding: 1rem 0 0 0;
             }
 
             @media(max-width: 700px){
@@ -357,7 +421,6 @@ export const ContactContainer = styled.div`
         font-size: 4.8rem;
         text-transform: uppercase;
         font-family: 'kollektif';
-        font-style: italic;
         letter-spacing: 0.5rem;
         padding: 4rem 5rem 2.5rem;
         margin: 0;
@@ -517,10 +580,11 @@ export const NavContainer = styled.div`
     }
 
     @media(max-width: 700px){
-        width: 83%;
+        width: 100%;
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 2rem;
+        padding-right: 0;
     }
 
     .top {
@@ -544,12 +608,12 @@ export const NavContainer = styled.div`
 
     a {
         writing-mode: vertical-rl;
-        color: #D0B4A4;
+        color: #b2935b;
         text-decoration: none;
         text-transform: uppercase;
         font-size: 1.1rem;
         font-family: 'Montserrat', sans-serif;
-        border-bottom: solid 1px #D0B4A4;
+        border-bottom: solid 1px #b2935b;
         padding: 3rem .75rem .75rem; 
         letter-spacing: .3rem;
 
@@ -603,8 +667,9 @@ export const ProjectNavContainer = styled.div`
 export const ProjectContainer = styled.div`
     width: 100%;
     display: flex;
-    color: #282F36;
-    padding-top: 4rem; 
+    color: #fff;
+    padding-top: 4rem;
+    background-color: #171c21;
 
     @media(max-width: 1050px){
         padding-top: 1.5rem;
@@ -617,7 +682,7 @@ export const ProjectContainer = styled.div`
     }
 
     .opp {
-        background-color: #D0B4A4;
+        background-color: #b2935b;
         width: 40%;
 
         @media(max-width: 1050px){
@@ -630,12 +695,12 @@ export const ProjectContainer = styled.div`
     }
 
     h1 {
-        color: ;
+        color: #fff;
         font-size: 10rem;
         font-family: 'kollektif';
         padding: 0 0 0 5rem;
         margin: 0;
-
+        
         @media(max-width: 1050px){
             font-size: 8.7rem;
             padding: 0 0 0 3rem;
@@ -678,14 +743,15 @@ export const ProjectContainer = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 2rem 0.5rem 3rem;
+        padding: 2rem 0 3rem;
+        color: #fff;
 
         @media(max-width: 1050px){
-            padding: 1.5rem 2.5rem 2.5rem;
+            padding: 1.5rem 0 2.5rem;
         }
 
         @media(max-width: 700px){
-            padding: 1rem 0.5rem 2.5rem;
+            padding: 1rem 0 2.5rem;
         }
 
         .row {
@@ -714,6 +780,7 @@ export const ProjectContainer = styled.div`
         flex-direction: row;
         width: 85%;
         padding: 1rem 0;
+        color: #fff;
 
         @media(max-width: 700px){
             width: 90%;
@@ -790,7 +857,7 @@ export const SkillsContainer = styled.div`
     }
 
     .opp {
-        background-color: #D0B4A4;
+        background-color: #b2935b;
 
         text-align: right;
 
@@ -809,6 +876,7 @@ export const SkillsContainer = styled.div`
         @media(max-width: 700px){
             width: 100%;
             display: flex;
+            justify-content: center;
         }
     }
 
