@@ -133,6 +133,24 @@ export const LandingContainer = styled.div`
     }
 `
 
+export const MobileNavContainer = styled.div`
+    display: none;
+
+    @media(max-width: 700px){
+        width: 90%;
+        display: flex;
+        padding: 0 0 1rem;
+        margin: 1rem 0 2rem;
+        
+        a {
+            padding: 0;
+            margin: 0;
+            height: auto;
+        }
+    }
+}
+`
+
 export const AboutContainer = styled.div`
     width: 100%;
     display: flex;
@@ -182,28 +200,6 @@ export const AboutContainer = styled.div`
         text-transform: uppercase;
         font-weight: 900;
         font-size: 1.3rem;
-    }
-
-    .mobilenav {
-        display: none;
-
-        @media(max-width: 700px){
-            width: 90%;
-            display: flex;
-            justify-content: center;
-            color: #171c21;
-            margin-bottom: 1rem;
-            
-            .top {
-                padding: 0 0 0 0;
-                margin: 0;
-            }
-
-            a {
-                padding: 1rem 0 0 0;
-                margin: 0;
-            }
-        }
     }
 
     .mobile {
@@ -275,11 +271,6 @@ export const AboutContainer = styled.div`
             a {
                 color: #171c21;
                 writing-mode: vertical-rl;
-                border-bottom: none;
-
-                @media(max-width: 700px){
-                    border-bottom: none;
-                }
             }
         }
     }
@@ -360,14 +351,6 @@ export const AboutContainer = styled.div`
             }
         }
 
-        .top {
-            padding-top: 0.5rem;
-
-            @media(max-width: 700px){
-                padding-top: 1rem;
-            }
-        }
-
         h3 {
             text-transform: uppercase;
             font-family: 'kollektif';
@@ -398,7 +381,7 @@ export const AboutContainer = styled.div`
 export const ContactContainer = styled.div`
     background-image: url(${contact});
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -420,7 +403,6 @@ export const ContactContainer = styled.div`
         letter-spacing: 0.5rem;
         padding: 4rem 5rem 2.5rem;
         margin: 0;
-        width: 100%;
 
         @media (max-width: 1050px){
             font-size: 3.6rem;
@@ -456,84 +438,18 @@ export const ContactContainer = styled.div`
         }
     }
 
+    .contact {
+        a {
+            color: #121c27;
+        }
+    } 
+
     .content {
         display: flex;
         flex-direction: column;
         padding: 0;
         margin: 0;
-    }
-
-    .nav {
-        display: flex;
-        width: 10%;
-
-        @media(max-width: 700px){
-            width: 100%;
-        }
-
-        div {
-            width: 100%;
-        }
-
-        a {
-            font-size: 1rem;
-            padding: 0;
-            margin: 0;
-            border-bottom: none;
-
-            @media(max-width: 700px){
-                font-size: 0.6rem;
-            }
-        }
-    }
-
-    .mobile {
-        display: none;
-
-        @media(max-width: 700px){
-            display: flex;
-        }
-    }
-
-    .desktop {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: flex-end;
-        width: 5%;
-        height: auto;
-        margin: 0;
-        padding: 0;
-
-        a {
-            writing-mode: vertical-rl;
-            text-transform: uppercase;
-            padding: 2rem 1rem;
-            color: #fff;
-        }
-
-        @media(max-width: 700px){
-            display: none;
-        }
-    }
-
-    div {
-        width: 70%;
-        display: flex;
-        flex-direction: row;
-        padding: 0.7rem 0;
-        margin: 0 5rem;
-
-        @media (max-width: 1050px){
-            margin: 0rem 2rem;
-            padding: 0.4rem 0;
-        }
-
-        @media (max-width: 500px){
-            margin: 0rem 1rem;
-            padding: 0.2rem 0;
-            width: 90%;
-        }
+        width: 90%;
 
         p, a {
             text-decoration: none;
@@ -550,6 +466,48 @@ export const ContactContainer = styled.div`
             @media (max-width: 500px){
                 font-size: 1rem;
             }
+        }
+    }
+
+    .desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        width: 5%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+
+        @media(max-width: 700px){
+            display: none;
+        }
+
+        a {
+            writing-mode: vertical-rl;
+            text-transform: uppercase;
+            padding: 2rem 1rem;
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    .point {
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        padding: 0.7rem 0;
+        margin: 0 5rem;
+
+        @media (max-width: 1050px){
+            margin: 0rem 2rem;
+            padding: 0.4rem 0;
+        }
+
+        @media (max-width: 500px){
+            margin: 0rem 1rem;
+            padding: 0.2rem 0;
+            width: 90%;
         }
     }
 `
@@ -580,7 +538,6 @@ export const NavContainer = styled.div`
         width: 100%;
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: 2rem;
         padding-right: 0;
     }
 
@@ -588,7 +545,7 @@ export const NavContainer = styled.div`
         padding: 1rem;
 
         @media(max-width: 700px){
-            padding: 0.5rem 0.5rem 0.5rem 1rem;
+            padding: 0;
         }
     }
 
@@ -616,7 +573,7 @@ export const NavContainer = styled.div`
         @media(max-width: 700px){
             writing-mode: horizontal-tb;
             border-bottom: none;
-            padding: 0.5rem;
+            padding: 0;
             font-size: 0.7rem;
             letter-spacing: 0.15rem;
         }
@@ -678,7 +635,7 @@ export const ProjectContainer = styled.div`
 
     @media(max-width: 700px){
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
         padding: 0;
     }
 
@@ -709,7 +666,7 @@ export const ProjectContainer = styled.div`
 
         @media(max-width: 700px){
             font-size: 4.5rem;
-            padding: 0 0.75rem 0 0.75rem;
+            padding: 0 0.75rem 0 1.5rem;
         }
     }
 
@@ -719,16 +676,6 @@ export const ProjectContainer = styled.div`
 
         @media(max-width: 700px){
             display: none;
-        }
-    }
-
-    .mobile {
-        display: none;
-
-        @media(max-width: 700px){
-            display: flex;
-            padding: 0.5rem 0.5rem 0 0 ;
-            justify-content: flex-end;
         }
     }
 
@@ -753,7 +700,8 @@ export const ProjectContainer = styled.div`
         }
 
         @media(max-width: 700px){
-            padding: 1rem 0 2.5rem;
+            width: 90%;
+            padding: 1rem 0 2.5rem 0.75rem;
         }
 
         .row {
@@ -845,10 +793,11 @@ export const SkillsContainer = styled.div`
         padding: 2.5rem 0;
         background-position: top left;
         background-size: cover;
+        align-items: center;
     }
 
     @media(max-width: 700px){
-        padding: 1rem 0;
+        padding: 0 0 2rem 0;
         background-position: center left;
     }
 
@@ -868,16 +817,6 @@ export const SkillsContainer = styled.div`
 
         @media(max-width: 700px){
             width: 85%;
-        }
-    }
-
-    .mobile {
-        display: none;
-
-        @media(max-width: 700px){
-            width: 97%;
-            display: flex;
-            justify-content: center;
         }
     }
 
@@ -917,7 +856,7 @@ export const SkillsContainer = styled.div`
 
         .number {
             width: 10%;
-            padding-right: 3rem;
+            padding: 0 3rem 0 0.7rem;
 
             @media(max-width: 1050px){
                 padding-right: 2rem;
@@ -944,7 +883,7 @@ export const SkillsContainer = styled.div`
 
         @media(max-width: 700px){
             font-size: 4.5rem;
-            padding: 0 0.75rem 0 0.75rem;
+            padding: 0 1.5rem 0 0.75rem;
         }
     }
 

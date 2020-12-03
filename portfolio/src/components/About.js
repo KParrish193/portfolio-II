@@ -1,5 +1,5 @@
 import React from 'react'
-import { AboutContainer } from '../styles'
+import { AboutContainer, MobileNavContainer } from '../styles'
 import NavOne from './NavOne';
 import about from '../assets/NZ6_7498.jpg';
 import me from '../assets/NZ6_7512.jpg';
@@ -16,9 +16,9 @@ function About() {
             </div>
 
             <div className="content">
-                <div className="mobilenav">
+                <MobileNavContainer>
                     <NavOne />
-                </div>
+                </MobileNavContainer>
 
                 <span className="heading">
                     <h2>About Me</h2>

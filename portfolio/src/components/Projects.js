@@ -1,27 +1,27 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import NavOne from './NavOne';
-import { ProjectContainer } from '../styles';
+import { ProjectContainer, MobileNavContainer } from '../styles';
 
 function Projects() {
     return(
         <ProjectContainer>
-            <div className="mobile">
+            <MobileNavContainer>
                 <NavOne />
-            </div>
+            </MobileNavContainer>
 
             <div className="content">
-            <div className="heading">
-                <h1>
-                    PRO
-                </h1>
-                <h1 className="opp">
-                    JE
-                </h1>
-                <h1>
-                    CTS
-                </h1>
-            </div>
+                <div className="heading">
+                    <h1>
+                        PRO
+                    </h1>
+                    <h1 className="opp">
+                        JE
+                    </h1>
+                    <h1>
+                        CTS
+                    </h1>
+                </div>
 
             <div className="projects">
                 <div className="row">

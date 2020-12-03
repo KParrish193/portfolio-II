@@ -1,5 +1,5 @@
 import React from 'react';
-import { SkillsContainer } from '../styles'
+import { SkillsContainer, MobileNavContainer } from '../styles'
 
 import { useWindowWidth } from '../utils/useWindowWidth'
 
@@ -17,9 +17,9 @@ function Skills() {
             style={{
                 backgroundImage: `url(${imageUrl})`
             }}>
-        <div className="nav mobile">
+        <MobileNavContainer className="nav mobile">
             <NavOne />
-        </div>
+        </MobileNavContainer>
 
         <div className="content">
         <div className="left">
